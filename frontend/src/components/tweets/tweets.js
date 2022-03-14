@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+//import { withRouter } from 'react-router-dom';
 import TweetBox from './tweet_box';
 
 class Tweet extends React.Component {
@@ -35,4 +35,4 @@ class Tweet extends React.Component {
     }
 }
 
-export default withRouter(Tweet);
+export default Tweet;

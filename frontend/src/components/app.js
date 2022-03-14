@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Switch } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import NavBarContainer from './nav/navbar_container';
 
 import TweetsContainer from './tweets/tweets_container';
@@ -13,7 +13,7 @@ import TweetComposeContainer from './tweets/tweet_compose_container';
 const App = () => (
     <div>
         <NavBarContainer />
-        <Switch>
+        <Routes>
             <AuthRoute exact path="/" component={MainPage} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
@@ -21,7 +21,7 @@ const App = () => (
             <ProtectedRoute exact path="/tweets" component={TweetsContainer} />
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <ProtectedRoute exact path="/new_tweet" component={TweetComposeContainer} />
-        </Switch>
+        </Routes>
     </div>
 );
 
