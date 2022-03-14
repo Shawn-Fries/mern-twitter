@@ -14,13 +14,13 @@ const App = () => (
     <div>
         <NavBarContainer />
         <Routes>
-            <AuthRoute exact path="/" component={MainPage} />
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
-            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <AuthRoute exact path="/" element={<MainPage/>} />
+            <AuthRoute exact path="/login" element={<LoginFormContainer/>} />
+            <AuthRoute exact path="/signup" element={<SignupFormContainer/>} />
 
-            <ProtectedRoute exact path="/tweets" component={TweetsContainer} />
-            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
-            <ProtectedRoute exact path="/new_tweet" component={TweetComposeContainer} />
+            <ProtectedRoute exact path="/tweets" elment={<TweetsContainer/>} />
+            <ProtectedRoute exact path="/profile" element={<ProfileContainer/>} />
+            <ProtectedRoute exact path="/new_tweet" element={<TweetComposeContainer/>} />
         </Routes>
     </div>
 );
